@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:05:27 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/05 15:20:58 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/08 18:58:16 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ char	*ft_strdup(const char *s1)
 	while (s[i])
 		i++;
 	p = malloc((i + 1) * sizeof(char));
+	if (p == NULL)
+		return (0);
 	i = 0;
 	while (s[i])
 	{
