@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:18:44 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/08 07:53:27 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/08 11:35:43 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ char	*ft_strnstr(const char *haystak, const char *needle, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
 #endif
