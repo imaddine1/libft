@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/07 15:17:50 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/07 15:30:38 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/08 18:56:02 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	str2 = (unsigned char *)s2;
 	if (n == 0)
 		return (0);
-	while (str1[i] == str2[i] && i < n)
+	while (str1[i] && str1[i] == str2[i] && i < n)
 	{
 		if (i == n - 1)
 			return (0);
