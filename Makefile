@@ -1,4 +1,15 @@
-# first test
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: iharile <iharile@student.42.fr>            +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/11/08 12:57:38 by iharile           #+#    #+#              #
+#    Updated: 2021/11/08 13:54:19 by iharile          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = ft
 
 CC = gcc
@@ -14,14 +25,14 @@ OBJ = $(SRC:%.c=%.o)
 		
 all : $(NAME)
 
-$(NAME) : $(SRC) $(OBJ)
+$(NAME) :
 	$(CC) -c $(FLAGS) $(SRC)
 	ar rcs $(LIB) $(OBJ) 
 
-run : $(NAME)
+run :
 	$(CC) $(OBJ) -o $(NAME)
 
-clean : $(OBJ)
+clean :
 	$(RM) $(OBJ) $(LIB)
 
 fclean : clean

@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 08:49:34 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/04 15:38:05 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/08 13:22:51 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(char *dst, const char *src, size_t n)
 	i = 0;
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
+	if (d == NULL && s == NULL)
+		return (0);
 	if (n == 0)
 		return (dst);
 	while (i < n)
