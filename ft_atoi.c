@@ -6,12 +6,11 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:24:23 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 10:45:42 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/09 13:24:41 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <limits.h>
 
 int	check_sign(char	*str)
 {

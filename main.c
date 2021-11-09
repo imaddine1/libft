@@ -9,8 +9,8 @@ int	main(int argc, char **argv)
 	
 //	__builtin___ft_memmove_chk (dst1 + 3, dst1, size, __builtin_object_size (dst1 + 3, 0));
 //	printf("%s\n", memmove(dst1 + 3, dst2, size));
-	printf("%d\n", atoi("-99"));
-	printf("%d\n", ft_atoi("-99"));
+	printf("%d\n", atoi("88888888888888"));
+	printf("%d\n", ft_atoi("88888888888888"));
 	
 
 //	printf("%s\n", dest);
