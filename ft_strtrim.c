@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:33:15 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 18:25:29 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/09 18:38:29 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,12 @@ char	*display(char *s)
 
 	d = 0;
 	i = 0;
-	while (s[i])
-	{
+	while (s[i++])
 		if (s[i] != -10)
 			d++;
-		i++;
-	}
 	ptr = malloc ((d + 1) * sizeof(char));
+	if (ptr == NULL)
+		return (0);
 	d = 0;
 	j = 0;
 	while (j < i)
