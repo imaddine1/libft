@@ -1,22 +1,24 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/09 18:26:05 by iharile          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 int	main(int argc, char **argv)
 {
 	(void)argc;
 	(void)argv;
-//	char src[100] = "oussama";
+	char str1[] = "imimabcimadharileaim";
+	char str2[] = "ima";
 
-	
-//	__builtin___ft_memmove_chk (dst1 + 3, dst1, size, __builtin_object_size (dst1 + 3, 0));
-//	printf("%s\n", memmove(dst1 + 3, dst2, size));
-	printf("%d\n", atoi("88888888888888"));
-	printf("%d\n", ft_atoi("88888888888888"));
-	
-
-//	printf("%s\n", dest);
-//	printf("%s\n", src);
-//	printf("%s\n", f1);
-//	printf("%s\n", ft_strnstr("sbpaaaasbpo", "po", 20));
-//	printf("%s\n", strnstr("sbpsaaaasbpo", "po", 20));
+	printf("%s\n", ft_strtrim(str1, str2));
 	return (0);
 }
