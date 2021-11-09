@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:33:15 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 18:38:29 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/09 19:43:16 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,20 +44,17 @@ char	*display(char *s)
 	d = 0;
 	i = 0;
 	while (s[i++])
-		if (s[i] != -10)
+		if (s[i] == -10)
 			d++;
-	ptr = malloc ((d + 1) * sizeof(char));
+	ft_memmove(s, s + d + 1, ft_strlen(s));
+	ptr = malloc ((ft_strlen(s) + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (0);
 	d = 0;
 	j = 0;
-	while (j < i)
-	{
-		if (s[j] != -10)
-			ptr[d++] = s[j];
-		j++;
-	}
-	ptr[i] = '\0';
+	while (j < ft_strlen(s))
+		ptr[d++] = s[j++];
+	ptr[d] = '\0';
 	return (ptr);
 }
 
