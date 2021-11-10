@@ -6,82 +6,80 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:33:15 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 19:43:16 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/10 12:06:06 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*check_str(char *s, char *set)
+static int	ft_start(char *s, char *set)
 {
-	int		i;
-	size_t	not;
-	int		j;
+	int	i;
+	int	j;
+	int	d;
 
-	j = 0;
-	not = 0;
 	i = 0;
-	while (set[i])
+	while (s[i])
 	{
-		if (s[0] == set[i])
-			s[0] = -10;
-		else
-			not++;
+		j = 0;
+		d = 0;
+		while (set[j])
+		{
+			if (s[i] == set[j])
+				d++;
+			j++;
+		}
+		if (d == 0)
+			break ;
 		i++;
 	}
-	if (not == strlen(set))
-		return (0);
-	return (s);
+	return (i);
 }
 
-char	*display(char *s)
+static int	ft_end(char *s, char *set)
 {
-	size_t	i;
-	char	*ptr;
-	size_t	j;
-	size_t	d;
+	int	i;
+	int	j;
+	int	d;
 
-	d = 0;
-	i = 0;
-	while (s[i++])
-		if (s[i] == -10)
-			d++;
-	ft_memmove(s, s + d + 1, ft_strlen(s));
-	ptr = malloc ((ft_strlen(s) + 1) * sizeof(char));
-	if (ptr == NULL)
-		return (0);
-	d = 0;
-	j = 0;
-	while (j < ft_strlen(s))
-		ptr[d++] = s[j++];
-	ptr[d] = '\0';
-	return (ptr);
+	i = ft_strlen(s) - 1;
+	while (i >= 0)
+	{
+		j = 0;
+		d = 0;
+		while (set[j])
+		{
+			if (s[i] == set[j])
+				d++;
+			j++;
+		}
+		if (d == 0)
+			break ;
+		i--;
+	}
+	if (i == -1)
+		i = (int)ft_strlen(s);
+	return (i);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
+	int		i;
 	char	*s;
-	size_t	i;
-	char	*find;
+	char	*p;
+	int		start;
+	int		end;
 
-	find = (char *)set;
-	i = 0;
 	s = (char *)s1;
-	while (s[i])
-	{
-		if (check_str(&s[i], find) != NULL)
-			i++;
-		else
-			break ;
-	}
-	i = ft_strlen(s) - 1;
-	while (i >= 0)
-	{
-		if (check_str(&s[i], find) != NULL)
-			i--;
-		else
-			break ;
-	}
-	s = display(s);
-	return (s);
+	start = ft_start(s, (char *) set);
+	end = ft_end(s, (char *) set);
+	p = malloc(((end - start) + 2) * sizeof(char));
+	printf ("start == %d || end == %d \n", start, end);
+	if (p == NULL)
+		return (0);
+	i = 0;
+	while (start <= end)
+		p[i++] = s[start++];
+	p[i] = '\0';
+	return (p);
 }
