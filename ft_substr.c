@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 07:51:40 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 10:50:25 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/10 13:22:17 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	unsigned int	j;
 
 	j = 0;
+	if (!s || !len)
+		return (0);
 	if (start > ft_strlen(s))
 		len = 0;
 	else if (ft_strlen(s) < len)

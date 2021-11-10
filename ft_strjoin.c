@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:22:16 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 10:49:57 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/10 13:23:41 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		i;
 	int		j;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	j = 0;
 	str1 = (char *)s1;
