@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 13:33:15 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/10 12:06:06 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/10 13:07:39 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,11 +70,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	s = (char *)s1;
 	start = ft_start(s, (char *) set);
 	end = ft_end(s, (char *) set);
 	p = malloc(((end - start) + 2) * sizeof(char));
-	printf ("start == %d || end == %d \n", start, end);
 	if (p == NULL)
 		return (0);
 	i = 0;
