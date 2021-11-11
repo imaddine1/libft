@@ -6,13 +6,13 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:38:46 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/11 19:33:14 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/11 19:38:43 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include"libft.h"
 
-int	counter_word(char const *s, char c)
+static int	counter_word(char const *s, char c)
 {
 	int	i;
 	int	counter;
@@ -31,7 +31,7 @@ int	counter_word(char const *s, char c)
 	return (counter);
 }
 
-int	counter_alpha(char const *s, char c)
+static int	counter_alpha(char const *s, char c)
 {
 	int	i;
 
@@ -41,7 +41,7 @@ int	counter_alpha(char const *s, char c)
 	return (i);
 }
 
-char	*convert(char const *s, int j)
+static char	*convert(char const *s, int j)
 {
 	int		i;
 	char	*str;
@@ -69,6 +69,8 @@ char	**ft_split(char const *s, char c)
 
 	i = 0;
 	k = 0;
+	if (!s)
+		return (0);
 	cnt_word = counter_word(s, c);
 	str = malloc((cnt_word + 1) * sizeof(char *));
 	if (!str)
