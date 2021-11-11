@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:38:46 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/11 19:38:43 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/11 20:15:39 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,17 +62,14 @@ static char	*convert(char const *s, int j)
 char	**ft_split(char const *s, char c)
 {
 	int		i;
-	int		j;
 	int		k;
-	int		cnt_word;
 	char	**str;
 
 	i = 0;
 	k = 0;
 	if (!s)
 		return (0);
-	cnt_word = counter_word(s, c);
-	str = malloc((cnt_word + 1) * sizeof(char *));
+	str = malloc((counter_word(s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (0);
 	while (s[i])
@@ -80,10 +77,7 @@ char	**ft_split(char const *s, char c)
 		while (s[i] == c && s[i])
 			i++;
 		if (s[i] && s[i] != c)
-		{
-			j = counter_alpha(s + i, c);
-			str[k++] = convert(s + i, j);
-		}
+			str[k++] = convert(s + i, counter_alpha(s + i, c));
 		while (s[i] && s[i] != c)
 			i++;
 	}
