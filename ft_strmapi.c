@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/12 18:04:10 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/12 16:09:12 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/12 17:52:26 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	f(unsigned int i, char *s)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	c;
+	int		i;
+	int		j;
+	char	*p;
 
-	c = i + s[i];
-	write (1, &c, 1);
-}
-
-int	main(void)
-{
-	//ft_striteri ("override this !", f);
-	return (0);
+	if (!s)
+		return (0);
+	i = ft_strlen((char *)s);
+	p = malloc ((i + 1) * (sizeof(char)));
+	if (!p)
+		return (0);
+	j = 0;
+	while (j < i)
+	{
+		p[j] = f(j, s[j]);
+		j++;
+	}
+	p[j] = '\0';
+	return (p);
 }

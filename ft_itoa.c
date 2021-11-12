@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 09:46:03 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/12 13:57:00 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/12 14:40:09 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,15 +52,11 @@ static char	*ft_swap(char *s)
 	return (s);
 }
 
-static char	*ft_putnbr(long n, int digit)
+static char	*ft_putnbr(long n, char *str)
 {
 	int		i;
-	char	*str;
 
 	i = 0;
-	str = malloc ((digit + 1) * sizeof(char));
-	if (!str)
-		return (0);
 	if (n < 0)
 	{
 		str[i] = '-';
@@ -96,7 +92,10 @@ char	*ft_itoa(int n)
 	}
 	i = 0;
 	digit = count_digit(nb);
-	str = ft_putnbr (nb, digit);
+	str = malloc ((digit + 1) * sizeof(char));
+	if (!str)
+		return (0);
+	ft_putnbr (nb, str);
 	ft_swap(str);
 	return (str);
 }
