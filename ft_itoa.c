@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 09:46:03 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/12 13:06:30 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/12 13:10:00 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	*ft_swap(char *s)
 	int		j;
 	char	temp;
 
-	i = strlen(s) - 1;
+	i = ft_strlen(s) - 1;
 	if (s[0] == '-')
 		j = 1;
 	else
