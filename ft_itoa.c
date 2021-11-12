@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 09:46:03 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/12 13:10:00 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/12 13:57:00 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,6 @@ char	*ft_itoa(int n)
 	long	nb;
 
 	nb = n;
-	i = 0;
 	if (nb == 0)
 	{
 		str = malloc (2 * sizeof(char));
@@ -95,6 +94,7 @@ char	*ft_itoa(int n)
 		str[1] = '\0';
 		return (str);
 	}
+	i = 0;
 	digit = count_digit(nb);
 	str = ft_putnbr (nb, digit);
 	ft_swap(str);

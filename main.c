@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/12 12:13:17 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/12 13:12:20 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ int	main(int argc, char **argv)
 	// 	i++;
 	// }
 	//printf ("%d\n", strcmp(ft_strtrim(str1, " \n\t"), str2));
-	printf("%s\n", ft_itoa(-1234));
+	printf("%s\n", ft_itoa(-1));
 	return (0);
 }
