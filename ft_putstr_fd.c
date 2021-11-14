@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/14 21:36:04 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/14 20:55:34 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/14 21:37:04 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<fcntl.h>
 #include "libft.h"
 
-int	main(void)
+void	ft_putstr_fd(char *s, int fd)
 {
-	int s = open("imad", 1);
-	ft_putstr_fd("imad harile", s);
-	return (0);
+	if (!s)
+		return ;
+	while (*s)
+		ft_putchar_fd(*(s++), fd);		
 }

@@ -1,21 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/14 21:36:04 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/14 21:43:30 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/14 21:58:19 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<fcntl.h>
 #include "libft.h"
 
-int	main(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	int s = open("imad", 1);
-	ft_putstr_fd("imad harile", s);
-	return (0);
+	char	i;
+	long	nb;
+
+	nb = n;
+	if (nb < 0)
+	{	
+		i = '-';
+		write (fd, &i, 1);
+		nb *= (-1);
+	}
+	else if (nb > 9)
+		ft_putnbr_fd(nb / 10, fd);
+	i = (nb % 10) + 48;
+	write (fd, &i, 1);
 }
