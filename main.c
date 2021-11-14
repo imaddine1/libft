@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/14 21:36:04 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/14 22:06:48 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	main(void)
 {
-	int s = open("imad", 1);
-	ft_putstr_fd("imad harile", s);
+	//int s = open("imad", 1);
+	ft_putnbr_fd(-123, 1);
 	return (0);
 }
