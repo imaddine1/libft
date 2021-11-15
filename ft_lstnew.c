@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/15 10:12:21 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/15 08:57:30 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/15 10:33:43 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+t_list	*ft_lstnew(void *content)
 {
-	char a[] = "imad"; 
-	t_list *k = ft_lstnew(a);
-	printf("%s", k->content);
-	return (0);
+	t_list	*x;
+
+	x = malloc (sizeof(t_list));
+	if (!x)
+		return (0);
+	x->content = content;
+	x->next = NULL;
+	return (x);
 }
