@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/16 20:42:02 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/17 09:45:08 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,9 @@ int	main(void)
 	ft_lstadd_back(&a, c);
 	t_list *curr;
 	curr = a;
+
+	char name[] = "oussama";
+	
 	while (curr)
 	{
 		printf ("%s\n", (curr->content));
