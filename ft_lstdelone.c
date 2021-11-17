@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/17 10:31:04 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/17 09:56:22 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/17 10:38:12 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	main(void)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	printf ("is ok\n");
-	return (0);
+	(*del)(lst->content);
+	free(lst);
 }
