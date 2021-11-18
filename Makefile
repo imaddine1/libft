@@ -6,7 +6,7 @@
 #    By: iharile <iharile@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 12:57:38 by iharile           #+#    #+#              #
-#    Updated: 2021/11/18 16:07:09 by iharile          ###   ########.fr        #
+#    Updated: 2021/11/18 17:32:01 by iharile          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,7 @@ bonus:
 	ar rcs $(LIB) $(OBJ)
 
 clean :
-	$(RM) $(OBJ) $(OBJ_BONUS) $(LIB)
+	$(RM) $(OBJ)  $(LIB)
 
 fclean : clean
 	$(RM) $(NAME)
