@@ -6,7 +6,7 @@
 #    By: iharile <iharile@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 12:57:38 by iharile           #+#    #+#              #
-#    Updated: 2021/11/12 13:57:38 by iharile          ###   ########.fr        #
+#    Updated: 2021/11/18 16:07:09 by iharile          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,9 +19,11 @@ LIB = libft.a
 
 
 SRC = *.c
-		
+bonus = *_bonus.c
+
 OBJ = $(SRC:%.c=%.o)
-		
+OBJ_BONUS = $(bonus:%.c=%.o)
+
 all : $(NAME)
 
 $(NAME) :
@@ -31,10 +33,14 @@ $(NAME) :
 run :
 	$(CC) $(OBJ) -o $(NAME)
 
+bonus:
+	$(CC) -c $(FLAGS) $(bonus)
+	ar rcs $(LIB) $(OBJ)
+
 clean :
-	$(RM) $(OBJ) $(LIB)
+	$(RM) $(OBJ) $(OBJ_BONUS) $(LIB)
 
 fclean : clean
 	$(RM) $(NAME)
 
-re : fclean all run
+re : fclean all bonus run
