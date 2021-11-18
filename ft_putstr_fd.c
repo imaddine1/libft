@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/14 20:55:34 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/14 21:37:04 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/18 15:57:53 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putstr_fd(char *s, int fd)
 	if (!s)
 		return ;
 	while (*s)
-		ft_putchar_fd(*(s++), fd);		
+		ft_putchar_fd(*(s++), fd);
 }
