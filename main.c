@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/18 17:49:19 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/18 18:27:28 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 int	main(void)
 {
-//	char	*str = "lorem ipsum dolor sit amet";
+	//char	*str = "tripouille";
+	//char	*rm = ""
 	printf ("%s\n", ft_substr(NULL, 7, 0));
 	return (0);
 }
