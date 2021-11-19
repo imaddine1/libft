@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:58:24 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/19 09:30:07 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/19 09:55:53 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	{
 		another = ft_lstnew(f(temp->content));
 		if (!another || !new)
-			break ;
+		{
+			ft_lstclear(&head, del);
+			return (head);
+		}
 		ft_lstadd_back(&new, another);
 		temp = temp->next;
 	}
-	if (!another || !new)
-		(*del)(new->content);
 	return (head);
 }
