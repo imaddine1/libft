@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/18 21:02:45 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/19 15:14:45 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,7 @@ int	main(void)
 	printf ("%s\n", first->content);
 	printf ("%s\n", first->next->content);
 	printf ("%s\n", first->next->next->content);
-//	printf ("%s\n", first->next->next->next->content);
-//	printf ("%s\n", first->next->next->next->next->content);
+	//printf ("%s\n", first->next->next->next->content);
 	// while (first)
 	// {
 	// 	printf ("%s\n", first->content);
