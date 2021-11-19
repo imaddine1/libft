@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:24:23 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/09 13:24:41 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:14:21 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ int	ft_atoi(const char *str)
 	long int	res;
 	int			sign;
 
+	if (!str)
+		return (0);
 	res = 0;
 	sign = 1;
 	while ((*str >= 9 && *str <= 13) || *str == 32)

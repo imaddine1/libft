@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 14:41:24 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/07 14:51:50 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:15:56 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strchr(const char *s, int c)
 	int				i;
 	char			b;
 
+	if (!s)
+		return (0);
 	i = 0;
 	str = (char *)s;
 	b = (char)c;

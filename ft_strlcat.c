@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 10:43:37 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/07 12:03:32 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:18:12 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	l_dst;
 	size_t	l_src;
 
+	if (!dst || !src)
+		return (0);
 	l_dst = ft_strlen(dst);
 	l_src = ft_strlen(src);
 	i = 0;
