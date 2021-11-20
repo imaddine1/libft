@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 15:02:19 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/20 10:54:21 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/20 11:06:05 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	main(void)
 {
-	printf ("%lu\n", strlcat(a, "kkk", 100));
+	char *a = "-000000 0 000156";
+	printf ("%d\n", atoi(a));
+	printf ("%d\n", ft_atoi(a));
 	return (0);
 }
