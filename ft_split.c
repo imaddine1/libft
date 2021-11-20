@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 18:38:46 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/19 12:13:17 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/20 09:58:06 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,18 @@ static int	counter_alpha(char const *s, char c)
 	while (s[i] != c && s[i])
 		i++;
 	return (i);
+}
+
+static char	**ft_free(char **str, int k)
+{
+	while (k >= 0)
+	{
+		free(str[k]);
+		k--;
+	}
+	free(str);
+	str = NULL;
+	return (str);
 }
 
 static char	*convert(char const *s, int j)
@@ -78,6 +90,8 @@ char	**ft_split(char const *s, char c)
 			i++;
 		if (s[i] && s[i] != c)
 			str[k++] = convert(s + i, counter_alpha(s + i, c));
+		if (!str)
+			ft_free(str, k);
 		while (s[i] && s[i] != c)
 			i++;
 	}
