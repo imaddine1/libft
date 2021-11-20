@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:05:27 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/19 16:16:54 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/19 16:38:51 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ char	*ft_strdup(const char *s1)
 	char	*p;
 	int		i;
 
-	if (!s1)
-		return (0);
 	s = (char *)s1;
 	i = 0;
 	while (s[i])
