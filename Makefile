@@ -6,14 +6,14 @@
 #    By: iharile <iharile@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/08 12:57:38 by iharile           #+#    #+#              #
-#    Updated: 2021/11/20 16:05:32 by iharile          ###   ########.fr        #
+#    Updated: 2021/11/21 14:49:33 by iharile          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ft
+NAME = libft.a
 CFLAGS = -Wall -Wextra -Werror
 RM = rm -f
-LIB = libft.a
+
 
 
 SRC = ft_isdigit.c ft_memset.c ft_strjoin.c ft_strtrim.c ft_isprint.c \
@@ -33,17 +33,17 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 all : $(NAME) 
 
 $(NAME) : $(OBJ)
-		 ar rcs $(LIB) $(OBJ)
-run : 
-	$(CC) $(OBJ) $(OBJ_BONUS) -o $(NAME)
-
+	
 bonus : $(OBJ_BONUS)
-	ar rcs $(LIB) $(OBJ_BONUS)
+
+%.o : %.c 
+	$(CC) $(CFLAGS) -c $< -o $@
+	ar rc $(NAME) $@
 
 clean :
-	$(RM) $(OBJ) $(OBJ_BONUS) $(LIB)
+	$(RM) $(OBJ) $(OBJ_BONUS) 
 
 fclean : clean
 	$(RM) $(NAME)
 
-re : fclean all bonus run
+re : fclean all bonus 
