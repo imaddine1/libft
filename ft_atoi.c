@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 10:24:23 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/21 16:15:58 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/21 16:19:06 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	ft_atoi(const char *str)
 			return (-1);
 		else if (res > 9223372036854775807 && sign == -1)
 			return (0);
-	//	printf ("chek ==> %llu\n", res);
 		str++;
 	}	
 	return (res * sign);
