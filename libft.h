@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 10:18:44 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/20 15:40:24 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 09:04:16 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,8 @@
 # include <stdio.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <ctype.h>
-# include <strings.h>
 # include <string.h>
+# include <strings.h>
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, size_t n);

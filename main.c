@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 07:41:46 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/22 09:43:40 by iharile          ###   ########.fr       */
+/*   Created: 2021/11/22 08:51:53 by iharile           #+#    #+#             */
+/*   Updated: 2021/11/22 10:24:18 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <ctype.h>
 
-void	ft_bzero(void *s, size_t n)
+int	main(void)
 {
-	size_t	i;
-	char	*ptr;
-
-	i = 0;
-	ptr = (char *)s;
-	while (i < n)
-	{
-		ptr[i] = 0;
-		i++;
-	}
+	
+	int s = ft_isalnum(170);
+	printf ("%d\n", s);
+	//printf (" %c\n", s[1]);
+	return (0);
 }

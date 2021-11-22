@@ -6,14 +6,17 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:05:30 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/06 14:18:21 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 10:18:26 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if ((c >= '0' && c <= '9') || (c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z'))
+	unsigned char num;
+
+	num = (unsigned char)c;
+	if ((num >= '0' && num <= '9') || (num >= 'a' && num <= 'z')
+		|| (num >= 'A' && num <= 'Z'))
 		return (1);
 	return (0);
 }
