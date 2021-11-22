@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 08:51:53 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/22 10:24:18 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 11:17:13 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(void)
 {
 	
-	int s = ft_isalnum(170);
+	char s = ft_memchr();
 	printf ("%d\n", s);
 	//printf (" %c\n", s[1]);
 	return (0);

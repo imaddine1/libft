@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 17:29:23 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/19 16:21:54 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 11:22:53 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strnstr(const char *haystak, const char *needle, size_t len)
 	while (h[i] && i < len)
 	{
 		j = 0;
-		while (n[j])
+		while (n[j] && h[i + j])
 		{
 			if (h[i + j] == n[j] && i + j < len)
 				j++;
