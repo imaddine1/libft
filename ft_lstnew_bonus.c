@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 08:57:30 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/19 10:44:17 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 11:14:13 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*x;
 
+	if (!content)
+		return (0);
 	x = malloc (sizeof(t_list));
 	if (!x)
 		return (0);

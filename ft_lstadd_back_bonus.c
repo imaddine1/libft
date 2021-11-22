@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/16 18:24:25 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/18 21:10:54 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 11:10:37 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*temp;
 
-	temp = *lst;
-	if (!lst)
+	if (!lst || !new)
 		return ;
+	temp = *lst;
 	if (temp != NULL)
 	{
 		while (temp->next)

@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/15 10:37:01 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/19 10:43:52 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 11:11:22 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!*lst || new)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }
