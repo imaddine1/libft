@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 08:51:53 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/22 11:17:13 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/22 12:13:40 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int	main(void)
 {
 	
-	char s = ft_memchr();
+	int s = ft_isprint(254);
 	printf ("%d\n", s);
 	//printf (" %c\n", s[1]);
 	return (0);
