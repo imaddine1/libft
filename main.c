@@ -6,7 +6,7 @@
 /*   By: iharile <iharile@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/22 17:57:28 by iharile           #+#    #+#             */
-/*   Updated: 2021/11/22 18:20:35 by iharile          ###   ########.fr       */
+/*   Updated: 2021/11/23 10:56:23 by iharile          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,6 @@
 
 int	main(void)
 {
-	char	d[100] = "Imad Harile";
-
-	ft_memmove(d + 5, d, 14);
-	printf ("%s", d);
+	ft_putnbr_fd(1154454554, 1);
 	return (0);
 }
